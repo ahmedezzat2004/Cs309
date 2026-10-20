@@ -148,8 +148,39 @@ form {
     gap: 0.35rem;
 }
 
+.field-error {
+    min-height: 1.4em;
+    color: #a12622;
+    font-size: 0.95rem;
+}
+
+.form-field [aria-invalid="true"] {
+    border-color: #a12622;
+}
+
+.table-controls {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table-status {
+    min-height: 1.6em;
+}
+
 label,
-legend {
+legend,
+.control-label {
     font-weight: 700;
 }
 
@@ -302,7 +333,8 @@ footer p {
 
 @media (min-width: 40rem) {
     .post-grid,
-    .form-grid {
+    .form-grid,
+    .table-controls {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
